@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# The absolute directory containing this script.
+DOTFILESDIR=$(cd `dirname $0` && pwd)
+
+# DIRECTORIES
+# We need to use `h` with `f` for directory links so subsequent runs of this
+# script don't create a second symbolic link within the target folder within
+# this repository.
+ln -hfsv $DOTFILESDIR/.githooks ~/.githooks
