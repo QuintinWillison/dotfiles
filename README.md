@@ -13,8 +13,9 @@ I've taken the approach of keeping things very simple, for now at least, opting 
 Broadly speaking:
 
 1. Move file or folder from `$HOME` to the root of this repository
-2. Add installation step to the [`make-links`](make-links) script
-3. Run the script at least two times
-4. Git: `add`, `commit` then `push` to publish
+2. Remove the dot prefix from the file or folder name
+3. Add installation step to the [`make-links`](make-links) script
+4. Run the script at least two times
+5. Git: `add`, `commit` then `push` to publish
 
 Running the script twice is important, in particular when the dotfiles being added are a folder.

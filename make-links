@@ -1,7 +1,12 @@
 #!/bin/sh
 
 # This script is loosely based on concepts found in Simon Woolf's dotfiles bootstrap script:
-# https://github.com/SimonWoolf/dotfiles/blob/master/bootstrap
+# https://github.com/SimonWoolf/dotfiles
+#
+# The dotfile files and folders within this repository do not have a dot prefix.
+# This makes this repository easier to browse with standard tools.
+# It's also referenced elsewhere as a preferred approach - e.g.:
+# https://grantammons.me/2017/11/26/efficiently-managing-dotfiles/
 
 # The absolute directory containing this script.
 DOTFILESDIR=$(cd `dirname $0` && pwd)
@@ -10,4 +15,4 @@ DOTFILESDIR=$(cd `dirname $0` && pwd)
 # We need to use `h` with `f` for directory links so subsequent runs of this
 # script don't create a second symbolic link within the target folder within
 # this repository.
-ln -hfsv $DOTFILESDIR/.githooks ~/.githooks
+ln -hfsv $DOTFILESDIR/githooks ~/.githooks
